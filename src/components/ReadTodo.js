@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import Cosmetics from './Cosmetics';
 import PropTypes from 'prop-types';
 import AddTodo from './AddTodo';
+
+// import baseURL from '../index'
+
+export const baseURL = `http://localhost:5000`
+
 class ReadTodo extends Component {
   state = {
     todo: []
   }
   fetchData = async () => {
-    const URL = 'http://localhost:5000/todo';
-    const todos = await fetch(URL);
+    const url = `${baseURL}/todo`;
+    console.log("URL", baseURL)
+    const todos = await fetch(url);
     const json = await todos.json();
     console.log("json", json)
     // await this.setState({todo: json})

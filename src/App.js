@@ -4,9 +4,9 @@ import Header from './components/layout/Header'
 import ReadTodo from './components/ReadTodo';
 import about from './components/pages/about';
 
-
-
 import './App.css';
+
+// export const baseURL = `http://localhost:5000`
 
 class App extends Component {
   state = {
@@ -19,7 +19,10 @@ class App extends Component {
       <Header />
       <Route exact path="/" render={props => (
         <React.Fragment>
-          <ReadTodo todo={this.state.todo} render={(e)=>this.fetchData(e)}/> 
+          <ReadTodo 
+          // todo={this.state.todo} 
+          // render={(e)=>this.fetchData(e)}
+          /> 
         </React.Fragment>
       )} />
       <Route path="/about" component={about} />

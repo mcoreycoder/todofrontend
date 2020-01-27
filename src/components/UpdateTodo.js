@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
+import {baseURL} from './ReadTodo'
+
 export class UpdateTodo extends Component {
     state = {
         _id: this.props._id,
         title: this.props.title
     }
 put = async() => {
-    const URL = 'http://localhost:5000/todo';
+    const URL = `${baseURL}/todo`;
     const response = await fetch (URL, {
         method: 'put',
         body: JSON.stringify(this.state),

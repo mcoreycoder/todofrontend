@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
+import {baseURL} from './ReadTodo'
+
 export class addTodo extends Component {
     state = {
         title: ''
     }
 
     post = async() => {
-        const URL = 'http://localhost:5000/todo';
+        const URL = `${baseURL}/todo`;
         const response = fetch (URL, {
             method: 'post',
             body: JSON.stringify(this.state),
