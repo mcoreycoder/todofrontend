@@ -3,9 +3,9 @@ import Cosmetics from './Cosmetics';
 import PropTypes from 'prop-types';
 import AddTodo from './AddTodo';
 
-// import baseURL from '../index'
+import {baseURL} from '../App'
 
-export const baseURL = `http://localhost:5000`
+// export const baseURL = `http://localhost:5000`
 
 class ReadTodo extends Component {
   state = {

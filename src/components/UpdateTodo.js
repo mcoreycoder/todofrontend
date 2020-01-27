@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import {baseURL} from './ReadTodo'
+// import {baseURL} from './ReadTodo'
+import {baseURL} from '../App'
 
 export class UpdateTodo extends Component {
     state = {

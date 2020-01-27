@@ -6,7 +6,7 @@ import about from './components/pages/about';
 
 import './App.css';
 
-// export const baseURL = `http://localhost:5000`
+export const baseURL = `http://localhost:5000`
 
 class App extends Component {
   state = {
